@@ -9,17 +9,52 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var tapTarget = 0
+    var tapCount = 0
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var tapTargetTxt: UITextField!
+    
+    @IBOutlet weak var tapBtn: UIButton!
+    @IBOutlet weak var tapCountLbl: UILabel!
+    
+    @IBAction func doPlay(sender: UIButton!) {
+        if tapTargetTxt.text != nil && tapTargetTxt.text != "" {
+            tapTarget = Int(tapTargetTxt.text!)!
+            showPlay()
+            tapCount = 0
+            checkIfFinished()
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func showPlay(inverse: Bool = false) {
+        logo.hidden = !inverse
+        playBtn.hidden = !inverse
+        tapTargetTxt.hidden = !inverse
+        
+        tapBtn.hidden = inverse
+        tapCountLbl.hidden = inverse
     }
-
-
+    
+    func checkIfFinished() {
+        if tapCount == 1 {
+            tapCountLbl.text = "One tap"
+        } else {
+            tapCountLbl.text = "\(tapCount) taps"
+        }
+        if tapCount >= tapTarget {
+            tapTargetTxt.text = ""
+            showPlay(true)
+            tapCount = 0
+        }
+    }
+    
+    @IBAction func doTap(sender: UIButton!) {
+        tapCount++
+        checkIfFinished()
+    }
+    
 }
 
