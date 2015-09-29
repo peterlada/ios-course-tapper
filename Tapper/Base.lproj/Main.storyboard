@@ -19,13 +19,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retrobg" translatesAutoresizingMaskIntoConstraints="NO" id="p1I-Ky-7e2" userLabel="bg">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="XEq-Zp-NLc" userLabel="logoImg">
-                                <rect key="frame" x="108" y="28" width="385" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="385" id="K42-84-WBy"/>
-                                    <constraint firstAttribute="height" constant="128" id="csk-1I-kld"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbe-x9-ywU" userLabel="playBtn">
                                 <rect key="frame" x="179" y="399" width="242" height="118"/>
                                 <constraints>
@@ -37,8 +30,8 @@
                                     <action selector="doPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="enD-8k-yN8"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number 1-999" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y4x-3w-FXH" userLabel="tapTarget">
-                                <rect key="frame" x="176" y="342" width="248" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number 1-999" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y4x-3w-FXH" userLabel="tapTarget">
+                                <rect key="frame" x="175" y="342" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="aeJ-NO-P7i"/>
                                     <constraint firstAttribute="height" constant="30" id="jQP-fn-Ah9"/>
@@ -57,8 +50,8 @@
                                     <action selector="doTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="92r-4P-5bv"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="400 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDe-mb-Zgw" userLabel="tapCount">
-                                <rect key="frame" x="74" y="186" width="453" height="66"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDe-mb-Zgw" userLabel="tapCount">
+                                <rect key="frame" x="74" y="186" width="453" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="5uH-JO-30b"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="453" id="Aug-FN-c7P"/>
@@ -67,6 +60,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="XEq-Zp-NLc" userLabel="logoImg">
+                                <rect key="frame" x="108" y="32" width="385" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="385" id="K42-84-WBy"/>
+                                    <constraint firstAttribute="height" constant="128" id="csk-1I-kld"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
